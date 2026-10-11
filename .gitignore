@@ -1,0 +1,58 @@
+# ============================================================
+# Mahaveer Computer – .gitignore
+# ============================================================
+
+# ------ Environment / Secrets --------------------------------
+.env
+# .env.example is intentionally NOT ignored – it is a safe template
+
+# ------ PHP config with real credentials --------------------
+config.php             # real creds – use config.php.example instead
+
+# ------ Docker secrets / override files ---------------------
+docker-compose.override.yml
+docker-compose.prod.yml
+*.pem
+*.key
+*.crt
+*.p12
+
+# ------ Database dumps / backups ----------------------------
+*.sql
+*.sql.gz
+*.dump
+*.bak
+backups/
+
+# ------ Uploaded user files (may contain PII) ---------------
+uploads/
+tmp/
+
+# ------ PHP / Composer dependencies -------------------------
+vendor/
+composer.lock
+
+# ------ OS files --------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------ IDE / Editor ----------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ------ Logs ------------------------------------------------
+*.log
+logs/
+error_log
+
+# ------ Compiled / temp PHP cache ---------------------------
+*.cache
+*.tmp
+
+# ------ Docker volumes / local runtime data -----------------
+mysql_data/
+data/
